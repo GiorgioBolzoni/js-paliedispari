@@ -43,23 +43,25 @@ function parolaPali() {
         let parolaInserita = inputEl.value;
         let parolaInseritaEl = parolaInserita.toLocaleLowerCase().trim();
 
-        // console.log(parolaInseritaEl)
 
-        let reversed;
+
+        let reversed = '';
         for (let i = parolaInseritaEl.length - 1; i >= 0; i--) {
-            console.log(parolaInseritaEl[i])
+            // console.log(parolaInseritaEl[i])
+            reversed += parolaInseritaEl[i]
+            // console.log(reversed[i])
             //controllo che la parola sia palindroma
-            // if (reversed += parolaInseritaEl[i]) {
-            //     msg = reversed + ' è una parola palindroma!'
-            //     console.log(msg)
-            // } else {
-
-            //     //se la parola inserita non è palindroma aggiungo in msg il messaggio di errore
-            //     msg = 'NB: La parola inserita non è palindroma!'
-            //     console.log(msg)
-            // }
 
 
+        }
+        if (reversed === parolaInseritaEl) {
+            msg = 'è una parola palindroma!'
+            console.log(msg)
+        } else {
+
+            //se la parola inserita non è palindroma aggiungo in msg il messaggio di errore
+            msg = 'NB: La parola inserita non è palindroma!'
+            console.log(msg)
         }
 
         // console.log(arr.reverse)
