@@ -55,31 +55,14 @@ function parolaPali() {
 
         }
         if (reversed === parolaInseritaEl) {
-            msg = 'è una parola palindroma!'
+            msg = parolaInseritaEl + ' è una parola palindroma! :)'
             console.log(msg)
         } else {
 
             //se la parola inserita non è palindroma aggiungo in msg il messaggio di errore
-            msg = 'NB: La parola inserita non è palindroma!'
+            msg = parolaInseritaEl + ' non è una parola palindroma! :('
             console.log(msg)
         }
-
-        // console.log(arr.reverse)
-
-
-        // //controllo che la parola sia palindroma
-        // if (arr === arr.reverse) {
-
-        //     msg = arr
-        //     console.log(msg)
-
-
-        // } else {
-
-        //     //se la parola inserita non è palindroma aggiungo in msg il messaggio di errore
-        //     msg = 'NB: La parola inserita non è palindroma!'
-        //     console.log(msg)
-        // }
     }
 }
 
