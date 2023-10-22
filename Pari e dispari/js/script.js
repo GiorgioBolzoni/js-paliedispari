@@ -18,16 +18,10 @@ stampo
 
 
 //prendo i diversi elementi (btn, input e div in cui stampare msg)
-let inputEl = document.querySelector('input');
 const divPC = document.getElementById('divComputer');
 const btnPari = document.querySelector('.btn-pari');
 const btnDispari = document.querySelector('.btn-dispari');
-const resultEl = document.querySelector('.alert');
 
-let valoreInserito = parseInt(inputEl.value)
-console.log(valoreInserito)
-const numberPC = getRndInteger(1, 100);
-let sumNum = valoreInserito + numberPC;
 
 // console.log(inputEl);
 // console.log(btn);
@@ -36,7 +30,15 @@ let sumNum = valoreInserito + numberPC;
 
 //aggiungo eventListener al bottone
 btnPari.addEventListener('click', function () {
+    let inputEl = document.querySelector('input');
+    const resultEl = document.querySelector('.alert');
+    let valoreInserito = parseInt(inputEl.value)
+    console.log(valoreInserito)
+    const numberPC = getRndInteger(1, 100);
+    let sumNum = valoreInserito + numberPC;
     // console.log(inputEl)
+    divPC.innerHTML = numberPC;
+
     if (isNaN(valoreInserito)) {
         alert('Devi inserire un numero!');
     } else {
@@ -46,17 +48,16 @@ btnPari.addEventListener('click', function () {
             <br>
             Hai vinto!
                 `
-            resultEl.classList.remove(d - none)
+            resultEl.classList.remove('d-none')
 
         } else {
-            divPC.innerHTML = numberPC;
 
             resultEl.innerHTML = `
             La somma è ${sumNum}
             <br>
             Hai perso!
                 `
-            resultEl.classList.remove(d - none)
+            resultEl.classList.remove('d-none')
 
         }
     }
@@ -66,6 +67,14 @@ btnPari.addEventListener('click', function () {
 
 });
 btnDispari.addEventListener('click', function () {
+    let inputEl = document.querySelector('input');
+    const resultEl = document.querySelector('.alert');
+    let valoreInserito = parseInt(inputEl.value)
+    console.log(valoreInserito)
+    const numberPC = getRndInteger(1, 100);
+    divPC.innerHTML = numberPC;
+    let sumNum = valoreInserito + numberPC;
+
     if (isNaN(valoreInserito)) {
         alert('Devi inserire un numero!');
     } else {
@@ -75,15 +84,14 @@ btnDispari.addEventListener('click', function () {
             <br>
             Hai vinto!
                 `;
-            resultEl.classList.remove(d - none)
+            resultEl.classList.remove('d-none')
         } else {
-            divPC.innerHTML = numberPC;
             resultEl.innerHTML = `
             La somma è ${sumNum}
             <br>
             Hai perso!
                 `
-            resultEl.classList.remove(d - none)
+            resultEl.classList.remove('d-none')
 
         }
     }
