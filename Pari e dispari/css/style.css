@@ -1,0 +1,12 @@
+#divComputer {
+    background-color: blue;
+    height: 50px;
+    width: 25%;
+    color: white;
+    font-weight: 600;
+}
+
+.alert {
+    background-color: rgb(233, 233, 1);
+    font-weight: 600;
+}
